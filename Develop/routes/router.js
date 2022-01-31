@@ -22,8 +22,11 @@ router.post('/notes', (req, res)=>{
 })
 
 //adding the delete router
-router.delete({
-  
+router.delete('/notes/:id', (req,res)=>{
+  data
+  .deleteNote(req.id)
+  .then(notes => res.json(notes))
+  .catch(err=> res.status(404).json(err))
 })
 
 module.exports = router;
