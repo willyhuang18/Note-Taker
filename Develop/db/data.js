@@ -23,7 +23,7 @@ class Save{
     getNote(){
         //return to the read()
         return this.read().then( notes => {
-            const checkNote;
+            let checkNote;
             try {
                 //using concat method to merge two or more arrays. 
                 checkNote = [].concat(JSON.parse(notes))
