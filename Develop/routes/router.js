@@ -21,4 +21,9 @@ router.post('/notes', (req, res)=>{
   .catch(err=> res.status(404).json(err))
 })
 
+//adding the delete router
+router.delete({
+  
+})
+
 module.exports = router;
