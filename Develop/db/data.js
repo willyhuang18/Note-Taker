@@ -45,6 +45,7 @@ class Save{
         }
         //make a new variable for the new note with the id 
         const newNote = {title, text, id: uuid()};
+        return this.getNote(newNote);
     }
 }
 
