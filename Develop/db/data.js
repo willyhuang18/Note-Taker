@@ -9,3 +9,11 @@ const readNote = util.promisify(fs.readFile);
 const writeNote = util.promisify(fs.writeFile);
 
 
+//Creating Sava class() to contain the require method
+class Save{
+    //return the note to the fs.writeFile method
+    write(note){return writeNote ('./Develop/db/db.json', JSON.stringify(note))};
+
+    //return the note to the fs.readFile method
+    read(){return readNote('./Develop/db/db.json', 'utf8')};
+}
