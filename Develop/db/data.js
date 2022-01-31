@@ -17,6 +17,16 @@ class Save{
     //return the note to the fs.readFile method
     read(){return readNote('./Develop/db/db.json', 'utf8')};
 
+    //need the getNote method for getting the note
+    getNote(){
+        //return to the read()
+        return this.read().then( notes => {
+            const checkNote = JSON.parse(notes);
+            return checkNote;
+        })
+        
+    }
+
     //create addNote() for adding more note
     addNote(note){
         //const data from db.json as argument 
