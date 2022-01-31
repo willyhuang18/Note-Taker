@@ -52,6 +52,9 @@ class Save{
             .then(addNote => this.write(addNote))
             .then(() => newNote);
     }
+    
+    //try to do the bonus delete()
+    deleteNote(){}
 }
 
 //make it module for other to use
