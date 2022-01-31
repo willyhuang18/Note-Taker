@@ -12,10 +12,10 @@ const writeNote = util.promisify(fs.writeFile);
 //Creating Sava class() to contain the require method
 class Save{
     //return the note to the fs.writeFile method
-    write(note){return writeNote ('./Develop/db/db.json', JSON.stringify(note))};
+    write(note){return writeNote ('../Develop/db/db.json', JSON.stringify(note))};
 
     //return the note to the fs.readFile method
-    read(){return readNote('./Develop/db/db.json', 'utf8')};
+    read(){return readNote('../Develop/db/db.json', 'utf8')};
 
     //need the getNote method for getting the note
     /*by using try and catch method, which is a block of statements to 
