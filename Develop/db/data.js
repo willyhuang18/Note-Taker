@@ -54,7 +54,12 @@ class Save{
     }
     
     //try to do the bonus delete()
-    deleteNote(){}
+    deleteNote(id){
+        //similar to getNote function
+        return this.getNote()
+        .then(note => this.addNote(note))
+        .then(newData => this.write(newData));
+    }
 }
 
 //make it module for other to use
