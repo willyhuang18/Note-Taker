@@ -57,6 +57,9 @@ class Save{
     deleteNote(id){
         //similar to getNote function
         return this.getNote()
+        //using the filter method to filter 
+        .then(note => note.filter(note => note.id !== id))
+        .then(newNote => this.write(newNote));
     }
 }
 
