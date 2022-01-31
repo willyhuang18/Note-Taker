@@ -2,7 +2,7 @@
 const util =require('util');
 const fs = require('fs');
 //provide a consistent format for any unique ID we use for our data.
-const {v4:uuidv4}=require('uuid');
+const uuid = require('../helper/uuid');
 
 //using promisify() method to takes a function as an input that follows the common Node. js callback style,
 const readNote = util.promisify(fs.readFile);
@@ -44,7 +44,7 @@ class Save{
             console.error('Please fill in the title and text!');
         }
         //make a new variable for the new note with the id 
-        const newNote = {title, text, id: uuidv4()};
+        const newNote = {title, text, id: uuid()};
         return newNote;
     }
 }
