@@ -24,7 +24,8 @@ router.post('/notes', (req, res)=>{
 //adding the delete router
 router.delete('/notes/:id', (req,res)=>{
   data
-  .deleteNote(req.body)
+  //delete the id represent the note
+  .deleteNote(req.params.id)
   .then(notes => res.json(notes))
   .catch(err=> res.status(404).json(err))
 })
