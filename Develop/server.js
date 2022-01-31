@@ -14,6 +14,8 @@ app.use(express.urlencoded({extended: true}));
 
 //using the static from 'public'
 app.use(express.static('public'));
+app.use('/api', router);
+app.use('/', routerHtml);
 
 //adding listener for the port
 app.listen(PORT, () =>
