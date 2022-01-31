@@ -30,3 +30,6 @@ class Save{
         return newNote;
     }
 }
+
+//make it module for other to use
+module.exports = new Save();
