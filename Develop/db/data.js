@@ -47,7 +47,8 @@ class Save{
         const newNote = {title, text, id: uuid()};
         //return to getNote(), update notes
         return this.getNote()
-            .then (note => {note, newNote})
+        //update the notes as array
+            .then (note => [...note, newNote])
             .then(addNote => this.write(addNote))
             .then(() => newNote);
     }
