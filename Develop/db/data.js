@@ -57,8 +57,6 @@ class Save{
     deleteNote(id){
         //similar to getNote function
         return this.getNote()
-        .then(note => this.addNote(note))
-        .then(newData => this.write(newData));
     }
 }
 
