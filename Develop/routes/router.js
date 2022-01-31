@@ -20,3 +20,5 @@ router.post('/notes', (req, res)=>{
   .then(notes => res.json(notes))
   .catch(err=> res.status(404).json(err))
 })
+
+module.exports = router;
