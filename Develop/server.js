@@ -1,6 +1,7 @@
 //using express package
 const express = require('express');
-
+const router = require('./routes/router');
+const routerHtml = require('./routes/html')
 //express server
 const app = express();
 
