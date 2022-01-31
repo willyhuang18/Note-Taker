@@ -6,3 +6,6 @@ const app = express();
 
 //create PORT
 const PORT = process.env.PORT || 3001
+
+// Middleware for parsing application/json and urlencoded data
+app.use(express.urlencoded({extended: true}));
