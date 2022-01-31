@@ -13,3 +13,8 @@ app.use(express.urlencoded({extended: true}));
 
 //using the static from 'public'
 app.use(express.static('public'));
+
+//adding listener for the port
+app.listen(PORT, () =>
+  console.log(`App listening at http://localhost:${PORT} `)
+);
