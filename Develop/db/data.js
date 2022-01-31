@@ -18,10 +18,18 @@ class Save{
     read(){return readNote('./Develop/db/db.json', 'utf8')};
 
     //need the getNote method for getting the note
+    /*by using try and catch method, which is a block of statements to 
+    try and specifies a response should an exception be thrown.*/
     getNote(){
         //return to the read()
         return this.read().then( notes => {
-            const checkNote = JSON.parse(notes);
+            const checkNote;
+            try {
+                //using concat method to merge two or more arrays. 
+                checkNote = [].concat(JSON.parse(notes))
+            }catch(err){
+                checkNote = [];
+            }
             return checkNote;
         })
         
