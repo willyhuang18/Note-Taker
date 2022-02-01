@@ -2,7 +2,7 @@
 const util =require('util');
 const fs = require('fs');
 //provide a consistent format for any unique ID we use for our data.
-const uuid = require('../helper/uuid');
+const uuid = require('./helper/uuid');
 
 //using promisify() method to takes a function as an input that follows the common Node. js callback style,
 const readNote = util.promisify(fs.readFile);
@@ -12,10 +12,10 @@ const writeNote = util.promisify(fs.writeFile);
 //Creating Sava class() to contain the require method
 class Save{
     //return the note to the fs.writeFile method
-    write(note){return writeNote ('../Develop/db/db.json', JSON.stringify(note))};
+    write(note){return writeNote ('./db/db.json', JSON.stringify(note))};
 
     //return the note to the fs.readFile method
-    read(){return readNote('../Develop/db/db.json', 'utf8')};
+    read(){return readNote('./db/db.json', 'utf8')};
 
     //need the getNote method for getting the note
     /*by using try and catch method, which is a block of statements to 
