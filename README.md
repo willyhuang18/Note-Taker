@@ -1,7 +1,7 @@
 # Note-Taker
 Work independent to implement the step into the existing Files:
 
-- As a Developer, I want to use the knowledge I learned to create the create  by using JavaScript, Node.js
+- As a Developer, I want to use the knowledge I learned to create the Note taker  by using JavaScript, Node.js
 
 # Site Picture
 
